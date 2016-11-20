@@ -1,0 +1,491 @@
+a,
+article,
+aside,
+body,
+br,
+button,
+dd,
+div,
+dl,
+dt,
+footer,
+form,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+header,
+hr,
+html,
+img,
+input,
+li,
+ol,
+p,
+pre,
+section,
+span,
+td,
+textarea,
+th,
+tr,
+ul,
+video {
+  margin: 0;
+  padding: 0; }
+
+/*General styles*/
+h4 {
+  color: #333; }
+
+body,
+html {
+  height: 100%;
+  width: 100%;
+  background-color: #43346d; }
+
+main {
+  width: 100%;
+  min-height: 94.8%;
+  margin-bottom: -100px;
+  position: relative;
+  overflow: hidden; }
+
+ul {
+  list-style-type: none;
+  width: 100%;
+  display: inline-block; }
+
+.push {
+  height: 100px; }
+
+.container-fluid {
+  padding: 0; }
+
+.row {
+  margin: 0; }
+
+.btn-transition {
+  -webkit-transition: ease-in 400ms;
+  transition: ease-in 400ms; }
+
+article {
+  padding: 10px;
+  margin-top: 10px;
+  position: relative; }
+  article a {
+    font-size: 1.5em;
+    font-weight: 900; }
+
+/* HEADER*/
+header {
+  width: 100%;
+  height: 70px;
+  position: fixed;
+  padding-top: 10px;
+  background-color: #fff;
+  z-index: 1000; }
+  header .logo a {
+    color: #43346d;
+    font-size: 1.2em;
+    font-weight: bold;
+    text-decoration: none; }
+  header h1 {
+    font-family: Arial;
+    display: inline-block;
+    font-weight: bolder;
+    text-transform: capitalize; }
+
+/*SECTION Add-task Options*/
+.category-options {
+  width: 450px;
+  margin: 0 auto;
+  margin-top: 70px;
+  border: none;
+  background-color: #fff; }
+  .category-options input[type="text"] {
+    width: 245px; }
+    .category-options input[type="text"]:focus {
+      border-color: #43346d; }
+  .category-options .options {
+    width: 300px; }
+    .category-options .options input,
+    .category-options .options select {
+      border: 1px solid #43346d;
+      -webkit-border-radius: 5px;
+              border-radius: 5px;
+      background-color: #fff;
+      float: right;
+      -webkit-user-select: none;
+         -moz-user-select: none;
+          -ms-user-select: none;
+              user-select: none; }
+      .category-options .options input:focus,
+      .category-options .options select:focus {
+        outline: #61528b auto 5px; }
+    .category-options .options span {
+      font-weight: bolder;
+      color: #43346d; }
+  .category-options #add-category {
+    padding: 7px 15px;
+    font-size: 4rem;
+    font-weight: bolder;
+    line-height: 0.9;
+    color: #fff;
+    background-color: #43346d;
+    border: 2px solid #43346d;
+    -webkit-border-radius: 50%;
+            border-radius: 50%; }
+    .category-options #add-category:hover {
+      color: #43346d;
+      background-color: #fff; }
+    .category-options #add-category:active {
+      color: #fff;
+      background-color: #6b5c95; }
+    .category-options #add-category:focus {
+      outline: none; }
+
+/*Create new task  */
+.add-task-cat {
+  -webkit-animation-name: add-task-cat;
+          animation-name: add-task-cat;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out; }
+  .add-task-cat > .btn-danger {
+    position: absolute;
+    top: 0;
+    right: 0;
+    -webkit-border-radius: 0;
+            border-radius: 0; }
+  .add-task-cat input {
+    width: 202px; }
+  .add-task-cat .btn-success {
+    padding: 5px 10px;
+    font-size: 3rem;
+    font-weight: bolder;
+    line-height: 0.9; }
+
+@-webkit-keyframes add-task-cat {
+  0% {
+    opacity: 0; }
+  50% {
+    -webkit-transform: scaleX(1.1);
+            transform: scaleX(1.1); }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    opacity: 1; } }
+
+@keyframes add-task-cat {
+  0% {
+    opacity: 0; }
+  50% {
+    -webkit-transform: scaleX(1.1);
+            transform: scaleX(1.1); }
+  100% {
+    -webkit-transform: scaleX(1);
+            transform: scaleX(1);
+    opacity: 1; } }
+
+.delete-task-cat {
+  -webkit-animation-name: delete-task-cat;
+          animation-name: delete-task-cat;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: ease-in-out;
+          animation-timing-function: ease-in-out; }
+
+@-webkit-keyframes delete-task-cat {
+  0% {
+    opacity: 1; }
+  50% {
+    -webkit-transform: scaleX(1.1);
+            transform: scaleX(1.1); }
+  100% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    opacity: 0; } }
+
+@keyframes delete-task-cat {
+  0% {
+    opacity: 1; }
+  50% {
+    -webkit-transform: scaleX(1.1);
+            transform: scaleX(1.1); }
+  100% {
+    -webkit-transform: scaleX(0);
+            transform: scaleX(0);
+    opacity: 0; } }
+
+.tasks-count {
+  width: 200px;
+  height: 50px;
+  margin-top: -6px;
+  margin-left: 1px;
+  padding: 5px;
+  background-color: #fff; }
+  .tasks-count span:first-of-type {
+    float: left;
+    line-height: 2; }
+  .tasks-count .tasks {
+    height: 30px;
+    width: 30px;
+    float: right;
+    display: block;
+    margin-right: 5px;
+    -webkit-border-radius: 100%;
+            border-radius: 100%;
+    text-align: center;
+    font-size: 1.8rem; }
+  .tasks-count .completed {
+    border: 2px solid greenyellow; }
+  .tasks-count .uncompleted {
+    border: 2px solid red; }
+  .tasks-count .total {
+    border: 2px solid #43346d; }
+
+/*task-template styles*/
+.task {
+  width: 100%;
+  height: auto;
+  margin-top: 10px;
+  padding: 10px;
+  position: relative;
+  background-color: #fff;
+  border-bottom: 1px solid #ddd;
+  -webkit-perspective: 1000px;
+          perspective: 1000px; }
+  .task.show-task {
+    -webkit-animation-name: show-task;
+            animation-name: show-task;
+    -webkit-animation-duration: 400ms;
+            animation-duration: 400ms;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
+
+@-webkit-keyframes show-task {
+  0% {
+    -webkit-transform: translate(-110%);
+            transform: translate(-110%); }
+  50% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15); }
+  75% {
+    -webkit-transform: translate(10%);
+            transform: translate(10%); }
+  100% {
+    -webkit-transform: translate(0%) scale(1);
+            transform: translate(0%) scale(1); } }
+
+@keyframes show-task {
+  0% {
+    -webkit-transform: translate(-110%);
+            transform: translate(-110%); }
+  50% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15); }
+  75% {
+    -webkit-transform: translate(10%);
+            transform: translate(10%); }
+  100% {
+    -webkit-transform: translate(0%) scale(1);
+            transform: translate(0%) scale(1); } }
+  .task.showTask {
+    -webkit-animation-name: show-task;
+            animation-name: show-task;
+    -webkit-animation-duration: 400ms;
+            animation-duration: 400ms;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
+  .task.hide-task {
+    -webkit-animation-name: hide-task;
+            animation-name: hide-task;
+    -webkit-animation-duration: 400ms;
+            animation-duration: 400ms;
+    -webkit-animation-fill-mode: backwards;
+            animation-fill-mode: backwards;
+    -webkit-animation-direction: reverse;
+            animation-direction: reverse;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out; }
+
+@-webkit-keyframes hide-task {
+  0% {
+    -webkit-transform: translate(-110%);
+            transform: translate(-110%); }
+  50% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15); }
+  75% {
+    -webkit-transform: translate(10%);
+            transform: translate(10%); }
+  100% {
+    -webkit-transform: translate(0%) scale(1);
+            transform: translate(0%) scale(1); } }
+
+@keyframes hide-task {
+  0% {
+    -webkit-transform: translate(-110%);
+            transform: translate(-110%); }
+  50% {
+    -webkit-transform: scale(1.15);
+            transform: scale(1.15); }
+  75% {
+    -webkit-transform: translate(10%);
+            transform: translate(10%); }
+  100% {
+    -webkit-transform: translate(0%) scale(1);
+            transform: translate(0%) scale(1); } }
+  .task p {
+    width: 88%;
+    color: #333;
+    padding-right: 10px;
+    font-weight: normal;
+    text-align: justify;
+    word-wrap: break-word;
+    white-space: pre-line;
+    line-height: 2; }
+  .task div {
+    padding: 0; }
+  .task input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    margin-top: 6px;
+    margin-left: 10px; }
+  .task .delete {
+    position: relative;
+    background-color: #fff;
+    border: none;
+    color: #333; }
+  .task .btn {
+    margin-right: 5px; }
+  .task .task-value {
+    background-color: #eae8e8; }
+    .task .task-value.task-ready {
+      background-color: #81c784; }
+
+/*Edit box template styles*/
+.edit-Area {
+  width: 100%;
+  height: auto;
+  margin: 10px 0;
+  padding-top: 5px;
+  float: left;
+  -webkit-border-radius: 10px;
+          border-radius: 10px;
+  -webkit-box-shadow: 0 5px 25px -3px #333;
+          box-shadow: 0 5px 25px -3px #333; }
+  .edit-Area.edit-box {
+    -webkit-animation: showEdit;
+            animation: showEdit;
+    -webkit-animation-duration: 400ms;
+            animation-duration: 400ms;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(1, 0.01, 1, 1.51);
+            animation-timing-function: cubic-bezier(1, 0.01, 1, 1.51); }
+
+@-webkit-keyframes showEdit {
+  0% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg); }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg); } }
+
+@keyframes showEdit {
+  0% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg); }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg); } }
+  .edit-Area.save-edit {
+    -webkit-animation: hideEdit;
+            animation: hideEdit;
+    -webkit-animation-duration: 400ms;
+            animation-duration: 400ms;
+    -webkit-animation-fill-mode: forwards;
+            animation-fill-mode: forwards;
+    -webkit-animation-timing-function: cubic-bezier(1, 0.01, 1, 1.51);
+            animation-timing-function: cubic-bezier(1, 0.01, 1, 1.51); }
+
+@-webkit-keyframes hideEdit {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg); }
+  100% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg); } }
+
+@keyframes hideEdit {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg); }
+  100% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg); } }
+  .edit-Area h4 {
+    text-align: center; }
+  .edit-Area textarea {
+    width: 80%;
+    height: 200px;
+    margin: 10px;
+    color: #333;
+    resize: none;
+    overflow: auto; }
+
+/* Page Footer */
+footer {
+  width: 100%;
+  height: 100px;
+  display: inline-block;
+  margin-top: 50px;
+  text-align: center;
+  background-color: #fff; }
+  footer a,
+  footer a:hover {
+    position: relative;
+    top: 25%;
+    color: #43346d;
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none; }
+
+@media screen and (min-width: 991px) and (max-width: 1449px) {
+  .edit-Area textarea {
+    width: 60%;
+    height: 150px; } }
+
+@media screen and (min-width: 1450px) and (max-width: 1635px) {
+  .edit-Area textarea {
+    width: 70%; } }
+
+@media screen and (max-width: 767px) {
+  .edit-Area textarea {
+    width: 70%; } }
+
+@media screen and (max-width: 480px) {
+  .category-options {
+    width: 290px; }
+    .category-options > input {
+      width: 205px; }
+    .category-options .options {
+      width: 260px; }
+  .edit-Area textarea {
+    width: 73%;
+    height: 140px; }
+  footer a {
+    font-size: 1.3rem; } }

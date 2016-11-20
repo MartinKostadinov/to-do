@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css" integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7" crossorigin="anonymous">
+    <link rel="stylesheet" href="styles/css/to-do-styles.css" media="screen" title="no title" charset="utf-8">
+    <title>TO-DO App</title>
+</head>
+
+<body>
+    <!-- HANDLEBARS TEMPLATES  - Task template-->
+    <script id="entry-template" type="text/x-handlebars-template">
+      <li class="task row show-task pull-right clearfix">
+          <div class="pull-right col-lg-3 col-md-4 col-sm-4 col-xs-4">
+            <a name="button" class="delete btn btn-md   pull-right btn-transition">X</a>
+            <a name="button" class="edit btn btn-md btn-primary pull-right btn-transition">Edit</a>
+          </div>
+          <div class="pull-right col-lg-9  task-value col-md-8 col-sm-8 col-xs-8 task-unready">
+            <p class="text pull-right">{{value}}</p>
+            <input type="checkbox" name="name" id="checkbox" value="" >
+          </div>
+      </li>
+
+    </script>
+    <!-- HANDLEBARS TEMPLATE -ADD TASK-->
+    <script id="add-cat" type="text/x-handlebars-template">
+      <article class="add-task-cat" style="background-color:{{bgColor}}">
+            <h3 style="color:{{hColor}}">{{title}}</h3>
+            <form action="">
+            <input type="text" name="setInput" placeholder="Add your Task">
+            <button  href="#/" class="btn btn-md btn-success btn-transition" name="button">+</button>
+            </form>
+            <a href="#/" class="btn btn-danger btn-transition">X</a>
+            <div class="tasks-count">
+            <span title="Tasks count">Tasks count</span>
+            <span title="Total tasks" class="total tasks">0</span>
+            <span title="Tasks to complete" class="uncompleted tasks">0</span>
+            <span title="Completed tasks" class="completed tasks">0</span>
+            </div>
+            <ul class="tasks clearfix">
+            </ul>
+        </article>
+    </script>
+    <!-- HANDLEBARS TEMPLATE -Edit TASK-->
+    <script id="edit-mode" type="text/x-handlebars-template">
+      <div class="edit-Area edit-box ">
+          <h4>Edit your task:</h4>
+          <textarea class="pull-left">{{text}}</textarea>
+          <a href="#" class="btn btn-info pull-left btn-transition">Save</a>
+          <a href="#" class="btn btn-danger  btn-cancel pull-left btn-transition">Cancel</a>
+      </div>
+    </script>
+    <!--Header -->
+    <header>
+        <div class="row clearfix">
+            <div class="logo  col-md-4  pull-left">
+                <h2><a href="#">Martin</a></h2></div>
+            <div class="col-md-4  text-center">
+                <h1>To-do </h1>
+            </div>
+        </div>
+    </header>
+    <!--Main content -->
+    <main class="container-fluid">
+        <!--Create task section -->
+        <section class="row">
+            <div class="col-md-12 center-block">
+                <article class="category-options">
+                    <form action="">
+                    <input type="text" placeholder="Create new category">
+                    <button type="submit" href="" id="add-category" class="btn btn-transition" title="Add Category">+</button>
+                    <div class="options clearfix">
+                        <label for="bg-color">Choose background color</label>
+                        <input type="color" id="bg-color" name="bg-color" value="#d5b933">
+
+                    </div>
+                    <div class="options clearfix">
+                        <label for="font-color">Choose title color</label>
+                        <input type="color" id="font-color" name="font-color">
+                    </div>
+
+                    <div class="options clearfix">
+                        <label for="select">Select screen position</label>
+                        <select name="select" id="select">
+                            <option value="Middle">Middle</option>
+                            <option value="Left">Left</option>
+                            <option value="Right">Right</option>
+                        </select>
+                    </div>
+                    </form>
+
+                </article>
+            </div>
+        </section>
+        <!--Task Section -->
+        <section class="row" id="main">
+            <div class="left  col-md-4 col-lg-4">
+                <!--template here -->
+            </div>
+            <div class="middle col-md-4 col-lg-4">
+                <!--template here -->
+            </div>
+            <div class="right col-md-4 col-lg-4">
+                <!--template here -->
+            </div>
+        </section>
+        <div class="push"></div>
+    </main>
+    <!--Footer -->
+    <footer class="footer"><a href="">martinkostadinov681@gmail.com</a></footer>
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
+    <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
+    <script type="text/javascript" src="scripts/pagescripts/todo-main.js"></script>
+
+</body>
+
+</html>
