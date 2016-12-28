@@ -116,7 +116,7 @@ var mainModule = (function($) {
             $getTaskColorValue = $container.find('input[name="bg-color"]').val(),
             $getTitleColorValue = $container.find('input[name="font-color"]').val(),
             $getPosition = $container.find('select').val(),
-            url = 'templates/create-task.handlebars',
+            url = 'templates/category.handlebars',
             addCategoryInputs;
 
         var category = new Category($getTaskTitle, $getTitleColorValue, $getTaskColorValue, $getPosition);
@@ -152,7 +152,7 @@ var mainModule = (function($) {
         var $article = $(this).parents('article'),
             $articleDataId = $article.data('id'),
             $input = $article.find("input[name='setInput']"),
-            url = 'templates/task-template.handlebars',
+            url = 'templates/task.handlebars',
             $getInputValue = $input.val(),
             $findList = $article.find('ul'),
             task = {
