@@ -1,0 +1,96 @@
+@import "header";
+@import "create-category";
+@import "category";
+@import "task";
+@import "edit-menu";
+$purple: #43346d;
+$white: #fff;
+/*General styles*/
+h4 {
+    color: #333;
+}
+
+body,
+html {
+    height: 100%;
+    width: 100%;
+    background-color: $purple;
+}
+
+main {
+    width: 100%;
+    min-height: 94.8%;
+    margin-bottom: -7.14em;
+    position: relative;
+    overflow: hidden;
+}
+
+.push {
+    height: 7.14em;
+}
+
+.btn--transition {
+    transition: ease-in 400ms;
+}
+
+article {
+    padding: 0.714em;
+    margin-top: 0.714em;
+    position: relative;
+}
+/* Page Footer */
+footer {
+    width: 100%;
+    height: 7.14em;
+    display: inline-block;
+    margin-top: 3.51em;
+    text-align: center;
+    background-color: #fff;
+}
+
+.footer__link {
+    position: relative;
+    top: 25%;
+    color: $purple;
+    font-size: 2em;
+    font-weight: bold;
+    text-decoration: none;
+}
+@media screen and (min-width: 991px) and (max-width: 1449px) {
+    .edit__field {
+        width: 60%;
+        height: 10.71em;
+    }
+}
+@media screen and (min-width: 1450px) and (max-width: 1635px) {
+    .edit__field {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 767px) {
+    .edit__field {
+        width: 70%;
+    }
+}
+@media screen and (max-width: 480px) {
+    .create {
+        width: 20.14em;
+    }
+
+    .create__category {
+        width: 14.4em;
+    }
+
+    .create__options {
+        width: 18.42em;
+    }
+
+    .edit__field {
+        width: 73%;
+        height: 140px;
+    }
+
+    .footer__link {
+        font-size: 1.3rem;
+    }
+}

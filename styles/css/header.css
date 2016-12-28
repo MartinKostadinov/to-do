@@ -1,0 +1,20 @@
+/*HEADER Styles*/
+header {
+  background-color: #fff; }
+
+.logo {
+  color: #43346d;
+  font-size: 1.2em;
+  margin-left: 0.2em;
+  font-weight: bold;
+  text-decoration: none; }
+
+.header__title {
+  position: absolute;
+  top: 0;
+  left: 50%;
+  -webkit-transform: translateX(-50%);
+      -ms-transform: translateX(-50%);
+          transform: translateX(-50%);
+  font-weight: bolder;
+  text-transform: capitalize; }

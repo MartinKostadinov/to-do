@@ -1,0 +1,77 @@
+/*Edit menu styles are :
+edit
+edit--show
+edit--hide
+*/
+.edit {
+  width: 100%;
+  height: auto;
+  margin: 0.714em 0;
+  padding-top: 0.357em;
+  float: left;
+  border-radius: 10.714em;
+  -webkit-box-shadow: 0 0.357em 1.78em -021em #333;
+          box-shadow: 0 0.357em 1.78em -021em #333; }
+
+.edit--show {
+  -webkit-animation: showEdit;
+          animation: showEdit;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(1, 0.01, 1, 1.51);
+          animation-timing-function: cubic-bezier(1, 0.01, 1, 1.51); }
+
+@-webkit-keyframes showEdit {
+  0% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg); }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg); } }
+
+@keyframes showEdit {
+  0% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg); }
+  100% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg); } }
+
+.edit--hide {
+  -webkit-animation: hideEdit;
+          animation: hideEdit;
+  -webkit-animation-duration: 400ms;
+          animation-duration: 400ms;
+  -webkit-animation-fill-mode: forwards;
+          animation-fill-mode: forwards;
+  -webkit-animation-timing-function: cubic-bezier(1, 0.01, 1, 1.51);
+          animation-timing-function: cubic-bezier(1, 0.01, 1, 1.51); }
+
+@-webkit-keyframes hideEdit {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg); }
+  100% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg); } }
+
+@keyframes hideEdit {
+  0% {
+    -webkit-transform: rotateX(0deg);
+            transform: rotateX(0deg); }
+  100% {
+    -webkit-transform: rotateX(90deg);
+            transform: rotateX(90deg); } }
+
+.edit__title {
+  text-align: center; }
+
+.edit__field {
+  width: 80%;
+  height: 14.28em;
+  margin: 0.714em;
+  color: #333;
+  resize: none;
+  overflow: auto; }

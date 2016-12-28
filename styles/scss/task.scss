@@ -1,0 +1,111 @@
+/*Styles for the Task template, styles used are :
+tasks
+task
+task--hide
+task--show
+task__text
+text__checkbox
+task__btn__delete
+task__btn
+task__value
+task__value--ready-js
+*/
+.tasks {
+  padding: 0;
+}
+.task {
+    width: 100%;
+    height: auto;
+    padding: 0.714em;
+    position: relative;
+    background-color: #fff;
+    perspective: 1000px;
+}
+
+.task--show {
+    animation-name: show-task;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: ease-out;
+}
+@keyframes show-task {
+    0% {
+        transform: translate(-110%);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    75% {
+        transform: translate(10%);
+    }
+
+    100% {
+        transform: translate(0%) scale(1);
+    }
+}
+
+.task--hide {
+    animation-name: hide-task;
+    animation-duration: 400ms;
+    animation-fill-mode: backwards;
+    animation-direction: reverse;
+    animation-timing-function: ease-out;
+}
+@keyframes hide-task {
+    0% {
+        transform: translate(-110%);
+    }
+
+    50% {
+        transform: scale(1.15);
+    }
+
+    75% {
+        transform: translate(10%);
+    }
+
+    100% {
+        transform: translate(0%) scale(1);
+    }
+}
+
+.task__text {
+    width: 88%;
+    color: #333;
+    padding-right: 0.714em;
+    font-weight: normal;
+    text-align: justify;
+    word-wrap: break-word;
+    white-space: pre-line;
+    line-height: 2;
+}
+
+.text__checkbox {
+    width: 1.42em;
+    height: 1.42em;
+    margin-top: 0.357em;
+    margin-left: 0.714em;
+}
+
+.task__btn__delete {
+    position: absolute;;
+    top: 0;
+    right:  0;
+    border: none;
+    border-radius: 0;
+}
+
+.task__btn__edit {
+  margin-right: 1.6em;
+}
+
+.task__value {
+    padding: 0;
+    background-color: #eae8e8;
+}
+
+.task__value--ready-js {
+    background-color: #81c784;
+}

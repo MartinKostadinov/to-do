@@ -1,0 +1,63 @@
+$purple: #43346d;
+$white: #fff;
+/*Create create styles section, contains :
+create
+create__create
+create__options
+create__options__select
+btn--add-category
+*/
+.create {
+    width: 32.14em;
+    margin: 4.9em auto 0;
+    border: none;
+    background-color: #fff;
+}
+
+.create__category {
+    width: 17.5em;
+
+    &:focus {
+        border-color: $purple;
+    }
+}
+
+.create__options {
+    width: 21.42em;
+}
+.create__options__select {
+        border: 1px solid $purple;
+        border-radius: 5px;
+        background-color: #fff;
+        float: right;
+        user-select: none;
+
+        &:focus {
+            outline: $purple + 30% auto 5px;
+        }
+    }
+.btn--add-category {
+    padding: 0.125em 0.35em;
+    font-size: 4rem;
+    font-weight: bolder;
+    line-height: 0.9;
+    color: #fff;
+    background-color: $purple;
+    border: 2px solid $purple;
+    border-radius: 50%;
+
+    &:hover {
+        color: $purple;
+        background-color: #fff;
+    }
+
+    &:active {
+        color: #fff;
+        background-color: $purple + 40%;
+    }
+
+    &:focus {
+        color: #fff;
+        outline: none;
+    }
+}

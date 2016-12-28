@@ -1,0 +1,51 @@
+/*Create create styles section, contains :
+create
+create__create
+create__options
+create__options__select
+btn--add-category
+*/
+.create {
+  width: 32.14em;
+  margin: 4.9em auto 0;
+  border: none;
+  background-color: #fff; }
+
+.create__category {
+  width: 17.5em; }
+  .create__category:focus {
+    border-color: #43346d; }
+
+.create__options {
+  width: 21.42em; }
+
+.create__options__select {
+  border: 1px solid #43346d;
+  border-radius: 5px;
+  background-color: #fff;
+  float: right;
+  -webkit-user-select: none;
+     -moz-user-select: none;
+      -ms-user-select: none;
+          user-select: none; }
+  .create__options__select:focus {
+    outline: #61528b auto 5px; }
+
+.btn--add-category {
+  padding: 0.125em 0.35em;
+  font-size: 4rem;
+  font-weight: bolder;
+  line-height: 0.9;
+  color: #fff;
+  background-color: #43346d;
+  border: 2px solid #43346d;
+  border-radius: 50%; }
+  .btn--add-category:hover {
+    color: #43346d;
+    background-color: #fff; }
+  .btn--add-category:active {
+    color: #fff;
+    background-color: #6b5c95; }
+  .btn--add-category:focus {
+    color: #fff;
+    outline: none; }

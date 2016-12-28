@@ -1,0 +1,59 @@
+/*Edit menu styles are :
+edit
+edit--show
+edit--hide
+*/
+.edit {
+    width: 100%;
+    height: auto;
+    margin: 0.714em 0;
+    padding-top: 0.357em;
+    float: left;
+    border-radius: 10.714em;
+    box-shadow: 0 0.357em 1.78em -021em #333;
+}
+//show edit box
+.edit--show {
+    animation: showEdit;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(1, 0.01, 1, 1.51);
+}
+@keyframes showEdit {
+    0% {
+        transform: rotateX(90deg);
+    }
+
+    100% {
+        transform: rotateX(0deg);
+    }
+}
+//hide edit box on save or cancel
+.edit--hide {
+    animation: hideEdit;
+    animation-duration: 400ms;
+    animation-fill-mode: forwards;
+    animation-timing-function: cubic-bezier(1, 0.01, 1, 1.51);
+}
+@keyframes hideEdit {
+    0% {
+        transform: rotateX(0deg);
+    }
+
+    100% {
+        transform: rotateX(90deg);
+    }
+}
+
+.edit__title {
+    text-align: center;
+}
+
+.edit__field {
+    width: 80%;
+    height: 14.28em;
+    margin: 0.714em;
+    color: #333;
+    resize: none;
+    overflow: auto;
+}

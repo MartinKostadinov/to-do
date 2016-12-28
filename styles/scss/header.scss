@@ -1,0 +1,23 @@
+$purple: #43346d;
+$white: #fff;
+/*HEADER Styles*/
+header {
+    background-color: $white;
+}
+
+.logo {
+    color: $purple;
+    font-size: 1.2em;
+    margin-left: 0.2em;
+    font-weight: bold;
+    text-decoration: none;
+}
+
+.header__title {
+    position: absolute;
+    top:0;
+    left:50%;
+    transform: translateX(-50%);
+    font-weight: bolder;
+    text-transform: capitalize;
+}
