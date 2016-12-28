@@ -64,12 +64,6 @@ btn--add-category
   .btn--add-category:hover {
     color: #43346d;
     background-color: #fff; }
-  .btn--add-category:active {
-    color: #fff;
-    background-color: #6b5c95; }
-  .btn--add-category:focus {
-    color: #fff;
-    outline: none; }
 
 /*Category styles are :
 category

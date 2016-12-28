@@ -50,14 +50,4 @@ btn--add-category
         color: $purple;
         background-color: #fff;
     }
-
-    &:active {
-        color: #fff;
-        background-color: $purple + 40%;
-    }
-
-    &:focus {
-        color: #fff;
-        outline: none;
-    }
 }
