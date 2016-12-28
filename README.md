@@ -29,5 +29,3 @@ Task options:
 **3. Stuff to change.**
 
  To change buttons with icons, to add more options like making task important, to add drag and drop functionality, to find host when everything can be saved to user profile;
-
-Files for this project - todo.html, todo2.html(only with local server);
