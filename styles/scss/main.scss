@@ -1,46 +1,43 @@
-@import "header";
-@import "create-category";
-@import "category";
-@import "task";
-@import "edit-menu";
+@import "_header";
+@import "_about";
+@import "_create-task";
+@import "_create-cat";
+@import "_task";
+@import "_edit-menu";
 $purple: #43346d;
 $white: #fff;
 /*General styles*/
+html {
+    position: relative;
+    min-height: 100%;
+}
+body, {
+    height: 100%;
+    width: 100%;
+    margin-bottom: 7.14em;
+    background-color: $purple;
+}
 h4 {
     color: #333;
 }
 
-body,
-html {
-    height: 100%;
-    width: 100%;
-    background-color: $purple;
-}
-
 main {
     width: 100%;
-    min-height: 94.8%;
-    margin-bottom: -7.14em;
     position: relative;
+    top: -7%;
     overflow: hidden;
-}
-
-.push {
-    height: 7.14em;
-}
-
-.btn--transition {
-    transition: ease-in 400ms;
 }
 
 article {
     padding: 0.714em;
-    margin-top: 0.714em;
+    // margin-top: 0.714em;
     position: relative;
 }
 /* Page Footer */
 footer {
     width: 100%;
+    position: absolute;
+    bottom: 0;
     height: 7.14em;
     display: inline-block;
     margin-top: 3.51em;
@@ -56,6 +53,22 @@ footer {
     font-weight: bold;
     text-decoration: none;
 }
+.btn--purple {
+    color: $purple;
+    padding: 0.5em;
+    background-color: $white;
+}
+.hidden-js {
+    display: none;
+}
+//material icon  size classes
+.md-48{
+    font-size: 48px;
+}
+.md-36{
+    font-size: 36px;
+}
+//media queries
 @media screen and (min-width: 991px) and (max-width: 1449px) {
     .edit__field {
         width: 60%;
@@ -87,9 +100,10 @@ footer {
 
     .edit__field {
         width: 73%;
-        height: 140px;
     }
-
+    footer {
+        height: 4.14em;
+    }
     .footer__link {
         font-size: 1.3rem;
     }

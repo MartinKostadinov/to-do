@@ -9,10 +9,11 @@ edit--hide
     margin: 0.714em 0;
     padding-top: 0.357em;
     float: left;
-    border-radius: 10.714em;
+    border-radius: 1em;
     box-shadow: 0 0.357em 1.78em -021em #333;
 }
 //show edit box
+
 .edit--show {
     animation: showEdit;
     animation-duration: 400ms;
@@ -29,6 +30,7 @@ edit--hide
     }
 }
 //hide edit box on save or cancel
+
 .edit--hide {
     animation: hideEdit;
     animation-duration: 400ms;
@@ -52,8 +54,18 @@ edit--hide
 .edit__field {
     width: 80%;
     height: 14.28em;
-    margin: 0.714em;
+    margin: 0.714em 0 0.714em 0.714em;
     color: #333;
     resize: none;
+    border: none;
+    border-right: 1px solid #e6e4e4;
     overflow: auto;
+}
+
+.edit__btns {
+    width: 18%;
+    height: 14.28em;
+    margin: 0.714em 0;
+    float: left;
+    background-color: #fff;
 }

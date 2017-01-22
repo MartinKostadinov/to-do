@@ -1,0 +1,192 @@
+$purple: #43346d;
+$white: #fff;
+/*HEADER Styles
+.header__menu-btn
+.header__menu-btn__icon
+.header__menu-btn__icon--active-js
+.header__nav
+.header__nav--visible-js
+.header__nav__item
+.header__nav__anchor
+.header__title
+.header__nav__list
+*/
+header {
+    height: 7.1em;
+    background-color: $white;
+}
+
+.header__menu-btn {
+    width: 6.25em;
+    height: 6.25em;
+    display: flex;
+    position: absolute;
+    right: 0;
+    margin-top: 0.625em;
+    margin-right: 0.625em;
+    align-items: center;
+    border-radius: 50%;
+    cursor: pointer;
+    background-color: $purple;
+    box-shadow: 0 6px 13px 1px rgba(0, 0, 0, 0.5);
+    transition: ease-in 0.4s;
+    z-index: 10;
+
+    &:hover {
+        background-color: $purple;
+    }
+}
+//sandwitch
+
+.header__menu-btn__icon,
+.header__menu-btn__icon::after,
+.header__menu-btn__icon::before {
+    content: '';
+    height: 2px;
+    width: 3.125em;
+    position: relative;
+    display: block;
+    margin: 0 auto;
+    background-color: $white;
+    transition: all ease-in-out 400ms;
+}
+
+.header__menu-btn__icon::after {
+    top: 12px;
+}
+
+.header__menu-btn__icon::before {
+    bottom: 14px;
+}
+//change sandwitch  to X on click
+
+.header__menu-btn__icon--active-js {
+    background: transparent;
+
+    &:before {
+        bottom: 0;
+        transform-origin: center;
+        transform: rotate(-45deg);
+        background: $white;
+    }
+
+    &:after {
+        top: -2px;
+        transform-origin: center;
+        transform: rotate(45deg);
+        background: $white;
+    }
+}
+
+.header__nav {
+    width: 21em;
+    display: none;
+    position: fixed;
+    right: 1%;
+    margin-top: 5.625em;
+    margin-left: 2em;
+    background: #eee;
+    font-weight: bold;
+    text-align: center;
+    z-index: 1;
+
+    &--visible-js {
+        display: block;
+        transform-origin: top left;
+        animation-name: showMenu;
+        animation-duration: 400ms;
+        animation-timing-function: ease-in-out;
+    }
+    @keyframes showMenu {
+        0% {
+            transform: scale(0);
+            opacity: 0;
+        }
+
+        80% {
+            transform: scale(1.15);
+        }
+
+        100% {
+            transform: scale(1);
+            opacity: 1;
+        }
+    }
+    //menu list items
+    &__item {
+        width: 100%;
+        height: 3.75em;
+        display: block;
+        //loop the items and  show them one by one
+        @for $header__nav__item from 1 through 4 {
+            transform-origin: top left;
+            margin-left: -250px;
+            opacity: 0;
+
+            &:nth-child(#{$header__nav__item}) {
+                animation-name: showLi;
+                animation-duration: 300ms;
+                animation-delay: (200ms * $header__nav__item) - 100;
+                animation-timing-function: ease-out;
+                animation-fill-mode: forwards;
+            }
+        }
+        @keyframes showLi {
+            0% {
+                transform: rotate(45deg) scale(0.1);
+                margin-left: -250px;
+                opacity: 0;
+            }
+
+            100% {
+                transform: rotate(0deg) scale(1);
+                margin-left: 0;
+                opacity: 1;
+            }
+        }
+    }
+    //menu  anchors
+    &__anchor {
+        display: block;
+        color: #696969;
+        padding: 1.25em 0.3125em;
+        font-size: 1.5rem;
+        transition: font-size 0.4s ease-out, color 0.4s ease-in;
+        transform-origin: top left;
+    }
+
+    &__anchor:after {
+        font-size: 1rem;
+        content: '';
+        height: 3px;
+        display: block;
+        margin: auto;
+        width: 10%;
+        background: gray;
+        transition: width 0.4s ease-in-out, background 0.4s ease;
+    }
+
+    &__anchor:hover:after {
+        width: 100%;
+        background: #ccc;
+    }
+
+    &__anchor:hover {
+        color: black;
+        text-decoration: none;
+    }
+
+    &__anchor:focus {
+        text-decoration: none;
+    }
+}
+
+.header__title {
+    text-align: center;
+    font-weight: bolder;
+    text-transform: capitalize;
+}
+
+.header__nav__list {
+    padding: 0;
+}
