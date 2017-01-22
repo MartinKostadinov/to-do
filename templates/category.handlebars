@@ -1,16 +1,18 @@
-  <article class="category" style="background-color:{{bgColor}}" data-id="{{id}}">
-        <h3 style="color:{{hColor}}">{{title}}</h3>
-        <form action="">
-        <input class="category__create-task"type="text" name="setInput" placeholder="Add your Task">
-        <button  href="#/" class="btn btn-md btn-success btn-transition btn__create-task" name="button">+</button>
+<article class="category" style="background-color:{{bgColor}}" data-id="{{id}}">
+    <h3 class="text-center" style="color:{{hColor}}">{{title}}</h3>
+    <div class="category__components">
+        <form onsubmit="return false">
+            <input class="category__create-task" type="text" name="setInput" required="required" placeholder="Add your Task">
+            <button type="submit" class="btn btn__create-task btn--purple" name="button" title="Add Task"><i class="material-icons md-36">&#xE146;</i></button>
+            <a href="#/" class="btn category__btn--close btn--purple" title="Delete Category"><i class="material-icons md-36">&#xE92B;</i> </a>
         </form>
-        <a href="#/" class="category__btn--close btn btn-transition btn-danger">X</a>
         <div class="tasks-count">
-        <span title="Tasks count" class="tasks-count__title">Tasks count</span>
-        <span title="Total tasks" class="tasks-count__counter--total tasks-count__counter">0</span>
-        <span title="Tasks to complete" class="tasks-count__counter--uncompleted tasks-count__counter">0</span>
-        <span title="Completed tasks" class="tasks-count__counter--completed tasks-count__counter">0</span>
+            <span title="Tasks count" class="tasks-count__title">Tasks count</span>
+            <span title="Total tasks" class="tasks-count__counter--total tasks-count__counter">0</span>
+            <span title="Tasks to complete" class="tasks-count__counter--uncompleted tasks-count__counter">0</span>
+            <span title="Completed tasks" class="tasks-count__counter--completed tasks-count__counter">0</span>
         </div>
-        <ul class="tasks clearfix">
-        </ul>
-    </article>
+    </div>
+    <ul class="tasks clearfix">
+    </ul>
+</article>

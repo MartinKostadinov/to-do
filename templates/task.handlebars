@@ -1,8 +1,14 @@
-<li class="task task--show row center-block" data-taskId = "{{taskId}}">
-        <a name="button" class=" task__btn task__btn__edit btn btn-sm btn-primary pull-right btn-transition">Edit</a>
-    <a name="button" class="task__btn task__btn__delete btn btn-sm  btn-danger pull-right btn-transition">X</a>
-    <div class="task__value--unready-js task__value col-lg-9 col-md-9 col-sm-10 col-xs-9 ">
-        <p class="task__text pull-right">{{value}}</p>
-        <input type="checkbox" class="text__checkbox" name="name" id="checkbox" value="">
+<li class="task task--show clearfix" data-taskId="{{taskId}}">
+    <div class="task__options">
+        <a name="remove task" class="task__btn task__btn__delete btn btn-sm pull-right" role="button" title="Delete Task">
+            <i class="material-icons">&#xE92B;</i>
+        </a>
+        <a name="task edit" class=" task__btn task__btn__edit btn btn-sm pull-right" role="button" title="Edit Task">
+            <i class="material-icons">&#xE254;</i>
+        </a>
+    </div>
+    <div class="task__value--unready-js task__value">
+        <input type="checkbox" class="text__checkbox pull-left" name="name" id="checkbox" value="">
+        <p class="task__text ">{{value}}</p>
     </div>
 </li>
