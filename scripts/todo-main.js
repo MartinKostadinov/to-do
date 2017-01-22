@@ -411,7 +411,7 @@
                     $toDoCont.addClass('hidden-js');
                     $aboutCont.removeClass('hidden-js');
                 } else {
-                    $aboutCont.load('../../about.html');
+                    $aboutCont.load('./about.html');
                     $toDoCont.addClass('hidden-js');
                 }
             } else {
