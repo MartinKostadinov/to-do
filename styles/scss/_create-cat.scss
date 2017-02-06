@@ -3,17 +3,17 @@ $white: #fff;
 /*Create create styles section, contains :
 create
 create__create
-create__options
-create__options__select
+form__options
+form__options__select
 btn--add-category
 */
-.create {
+.form {
     width: 35em;
     border: none;
     background-color: #fff;
 }
 
-.create__category {
+.form__title-input {
     width: 17.5em;
 
     &:focus {
@@ -21,11 +21,11 @@ btn--add-category
     }
 }
 
-.create__options {
+.form__options {
     width: 21.42em;
 }
 
-.create__options__select {
+.form__options__select {
     border: 1px solid $purple;
     border-radius: 5px;
     background-color: #fff;

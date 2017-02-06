@@ -11,12 +11,15 @@ html {
     position: relative;
     min-height: 100%;
 }
-body, {
+
+body {
     height: 100%;
     width: 100%;
     margin-bottom: 7.14em;
     background-color: $purple;
+    overflow: hidden;
 }
+
 h4 {
     color: #333;
 }
@@ -30,7 +33,6 @@ main {
 
 article {
     padding: 0.714em;
-    // margin-top: 0.714em;
     position: relative;
 }
 /* Page Footer */
@@ -53,19 +55,23 @@ footer {
     font-weight: bold;
     text-decoration: none;
 }
+
 .btn--purple {
     color: $purple;
     padding: 0.5em;
     background-color: $white;
 }
+
 .hidden-js {
     display: none;
 }
 //material icon  size classes
-.md-48{
+
+.md-48 {
     font-size: 48px;
 }
-.md-36{
+
+.md-36 {
     font-size: 36px;
 }
 //media queries
@@ -101,9 +107,11 @@ footer {
     .edit__field {
         width: 73%;
     }
+
     footer {
         height: 4.14em;
     }
+
     .footer__link {
         font-size: 1.3rem;
     }

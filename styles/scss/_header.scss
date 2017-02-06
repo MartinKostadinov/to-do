@@ -1,22 +1,22 @@
 $purple: #43346d;
 $white: #fff;
 /*HEADER Styles
-.header__menu-btn
-.header__menu-btn__icon
-.header__menu-btn__icon--active-js
-.header__nav
-.header__nav--visible-js
-.header__nav__item
-.header__nav__anchor
+.btn__menu
+.btn__menu__icon
+.btn__menu__icon--active-js
+.nav
+.nav--visible-js
+.nav__item
+.nav__anchor
 .header__title
-.header__nav__list
+.nav__list
 */
 header {
     height: 7.1em;
     background-color: $white;
 }
 
-.header__menu-btn {
+.btn__menu {
     width: 6.25em;
     height: 6.25em;
     display: flex;
@@ -38,9 +38,9 @@ header {
 }
 //sandwitch
 
-.header__menu-btn__icon,
-.header__menu-btn__icon::after,
-.header__menu-btn__icon::before {
+.btn__menu__icon,
+.btn__menu__icon::after,
+.btn__menu__icon::before {
     content: '';
     height: 2px;
     width: 3.125em;
@@ -51,16 +51,16 @@ header {
     transition: all ease-in-out 400ms;
 }
 
-.header__menu-btn__icon::after {
+.btn__menu__icon::after {
     top: 12px;
 }
 
-.header__menu-btn__icon::before {
+.btn__menu__icon::before {
     bottom: 14px;
 }
 //change sandwitch  to X on click
 
-.header__menu-btn__icon--active-js {
+.btn__menu__icon--active-js {
     background: transparent;
 
     &:before {
@@ -78,7 +78,7 @@ header {
     }
 }
 
-.header__nav {
+.nav {
     width: 21em;
     display: none;
     position: fixed;
@@ -118,15 +118,15 @@ header {
         height: 3.75em;
         display: block;
         //loop the items and  show them one by one
-        @for $header__nav__item from 1 through 4 {
+        @for $nav__item from 1 through 4 {
             transform-origin: top left;
             margin-left: -250px;
             opacity: 0;
 
-            &:nth-child(#{$header__nav__item}) {
+            &:nth-child(#{$nav__item}) {
                 animation-name: showLi;
                 animation-duration: 300ms;
-                animation-delay: (200ms * $header__nav__item) - 100;
+                animation-delay: (200ms * $nav__item) - 100;
                 animation-timing-function: ease-out;
                 animation-fill-mode: forwards;
             }
@@ -179,6 +179,20 @@ header {
     &__anchor:focus {
         text-decoration: none;
     }
+    //hide header Nav
+
+    header {
+        position: absolute !important;
+        clip: rect(1px 1px 1px 1px);
+        /*for IE 6,7*/
+        clip: rect(1px, 1px, 1px, 1px);
+        padding: 0 !important;
+        border: 0 !important;
+        height: 1px !important;
+        width: 1px !important;
+        overflow: hidden;
+        white-space: nowrap;
+    }
 }
 
 .header__title {
@@ -187,6 +201,6 @@ header {
     text-transform: capitalize;
 }
 
-.header__nav__list {
+.nav__list {
     padding: 0;
 }
