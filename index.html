@@ -12,73 +12,76 @@
 </head>
 
 <body>
-    <!--Header -->
-    <header class="navbar">
-        <div class="header__menu-btn pull-right" title="Menu" role="button">
-            <div class="header__menu-btn__icon"></div>
-        </div>
-        <nav class="header__nav">
-            <ul class="header__nav__list" role="menubar" aria-hidden="true">
-                <li class="header__nav__item" role="menuitem">
-                    <a class="header__nav__anchor about" href="#about">About</a>
-                </li>
-                <li class="header__nav__item" role="menuitem">
-                    <a class="header__nav__anchor" href="#todo">To do</a>
-                </li>
-            </ul>
-        </nav>
-        <h1 class="header__title">To-do </h1>
-    </header>
-    <!--Main content -->
-    <main class="container-fluid">
-        <!--Create task section -->
-        <div id="about">
-        </div>
-        <div id="to-do">
-            <section class="row">
-                <div class="col-md-12 center-block">
-                    <article class="create center-block">
-                        <form onsubmit="return false">
-                            <input class="create__category" type="text" placeholder="Create new task category" required="required">
-                            <button type="submit" class="btn btn--transition btn--add-category" title="Add category">
-                            <i class="material-icons md-48">&#xE147;</i>
-                            </button>
-                            <div class="create__options clearfix">
-                                <label for="bg-color">Choose Category color</label>
-                                <input class="create__options__select" type="color" id="bg-color" name="bg-color" value="#d5b933">
-                            </div>
-                            <div class="create__options clearfix">
-                                <label for="font-color">Choose title color</label>
-                                <input class="create__options__select" type="color" id="font-color" name="font-color" value="#43346d">
-                            </div>
-                            <div class="create__options clearfix">
-                                <label for="select">Select screen position</label>
-                                <select class="create__options__select" name="select" id="select">
-                            <option value="Middle">Middle</option>
-                            <option value="Left">Left</option>
-                            <option value="Right">Right</option>
-                        </select>
-                            </div>
-                        </form>
-                    </article>
-                </div>
-            </section>
-            <!--Task Section -->
-            <section class="row categories" id="main">
-                <div class="left  col-md-4 col-lg-4">
-                    <!--template here -->
-                </div>
-                <div class="middle col-md-4 col-lg-4">
-                    <!--template here -->
-                </div>
-                <div class="right col-md-4 col-lg-4">
-                    <!--template here -->
-                </div>
-            </section>
-        </div>
+  <!--Header -->
+  <header id="header" class="navbar">
+      <div class="btn__menu pull-right" title="Menu" role="button">
+          <div class="btn__menu__icon"></div>
+      </div>
+      <nav class="nav">
+          <header>
+              <h2>Navigation menu</h2>
+          </header>
+          <ul class="nav__list" role="menubar" aria-hidden="true">
+              <li class="nav__item" role="menuitem">
+                  <a class="nav__anchor about" href="#about">About</a>
+              </li>
+              <li class="nav__item" role="menuitem">
+                  <a class="nav__anchor" href="#todo">To do</a>
+              </li>
+          </ul>
+      </nav>
+      <h1 class="header__title">To-do </h1>
+  </header>
+  <!--Main content -->
+  <main class="container-fluid">
+      <!--Create task section -->
+      <div id="about">
+      </div>
+      <div id="to-do">
+          <section class="row">
+              <div class="col-md-12 center-block">
+                  <article id="form-container" class="form center-block">
+                      <form onsubmit="return false">
+                          <input class="form__title-input" type="text" placeholder="Create new task category" required="required">
+                          <button type="submit" class="btn btn--transition btn--add-category" title="Add category">
+                          <i class="material-icons md-48">&#xE147;</i>
+                          </button>
+                          <div class="form__options clearfix">
+                              <label for="bg-color">Choose Category color</label>
+                              <input class="form__options__select" type="color" id="bg-color" name="bg-color" value="#d5b933">
+                          </div>
+                          <div class="form__options clearfix">
+                              <label for="title-color">Choose title color</label>
+                              <input class="form__options__select" type="color" id="title-color" name="font-color" value="#43346d">
+                          </div>
+                          <div class="form__options clearfix">
+                              <label for="select-position">Select screen position</label>
+                              <select class="form__options__select" name="select" id="select-position">
+                              <option value="Middle">Middle</option>
+                              <option value="Left">Left</option>
+                              <option value="Right">Right</option>
+                          </select>
+                          </div>
+                      </form>
+                  </article>
+              </div>
+          </section>
+          <!--Task Section -->
+          <section class="row categories" id="tasks-container">
+              <div class="left  col-md-4 col-lg-4">
+                  <!--template here -->
+              </div>
+              <div class="middle col-md-4 col-lg-4">
+                  <!--template here -->
+              </div>
+              <div class="right col-md-4 col-lg-4">
+                  <!--template here -->
+              </div>
+          </section>
+      </div>
 
-    </main>
-    <!--Footer -->
+  </main>
+  <!--Footer -->
     <footer class="footer"><a href="" class="footer__link">martinkostadinov681@gmail.com</a></footer>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.1.0/jquery.min.js"></script>
     <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/handlebars.js/4.0.5/handlebars.js"></script>
