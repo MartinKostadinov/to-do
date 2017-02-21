@@ -8,13 +8,13 @@ form__options__select
 btn--add-category
 */
 .form {
-    width: 35em;
+    width: calc(10% + 18em);
     border: none;
     background-color: #fff;
 }
 
 .form__title-input {
-    width: 17.5em;
+    width: calc(10% + 12em);
 
     &:focus {
         border-color: $purple;
@@ -22,7 +22,7 @@ btn--add-category
 }
 
 .form__options {
-    width: 21.42em;
+    width: calc(10% + 16em);
 }
 
 .form__options__select {

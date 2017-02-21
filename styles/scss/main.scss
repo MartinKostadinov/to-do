@@ -40,7 +40,7 @@ footer {
     width: 100%;
     position: absolute;
     bottom: 0;
-    height: 7.14em;
+    padding: 1.5em;
     display: inline-block;
     margin-top: 3.51em;
     text-align: center;
@@ -51,7 +51,7 @@ footer {
     position: relative;
     top: 25%;
     color: $purple;
-    font-size: 2em;
+    font-size: 2rem;
     font-weight: bold;
     text-decoration: none;
 }
@@ -74,45 +74,4 @@ footer {
 .md-36 {
     font-size: 36px;
 }
-//media queries
-@media screen and (min-width: 991px) and (max-width: 1449px) {
-    .edit__field {
-        width: 60%;
-        height: 10.71em;
-    }
-}
-@media screen and (min-width: 1450px) and (max-width: 1635px) {
-    .edit__field {
-        width: 70%;
-    }
-}
-@media screen and (max-width: 767px) {
-    .edit__field {
-        width: 70%;
-    }
-}
-@media screen and (max-width: 480px) {
-    .create {
-        width: 20.14em;
-    }
 
-    .create__category {
-        width: 14.4em;
-    }
-
-    .create__options {
-        width: 18.42em;
-    }
-
-    .edit__field {
-        width: 73%;
-    }
-
-    footer {
-        height: 4.14em;
-    }
-
-    .footer__link {
-        font-size: 1.3rem;
-    }
-}

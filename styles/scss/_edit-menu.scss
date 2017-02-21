@@ -52,8 +52,8 @@ edit--hide
 }
 
 .edit__field {
-    width: 80%;
-    height: 14.28em;
+    width:calc(63% + 2em);
+    height: calc(2vw + 10em);
     margin: 0.714em 0 0.714em 0.714em;
     color: #333;
     resize: none;
@@ -64,7 +64,7 @@ edit--hide
 
 .edit__btns {
     width: 18%;
-    height: 14.28em;
+    height: calc(2vw + 10em);
     margin: 0.714em 0;
     float: left;
     background-color: #fff;

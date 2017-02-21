@@ -12,13 +12,13 @@ $white: #fff;
 .nav__list
 */
 header {
-    height: 7.1em;
+    height: 5.1em;
     background-color: $white;
 }
 
 .btn__menu {
-    width: 6.25em;
-    height: 6.25em;
+    width: 4.25em;
+    height: 4.25em;
     display: flex;
     position: absolute;
     right: 0;
@@ -43,7 +43,7 @@ header {
 .btn__menu__icon::before {
     content: '';
     height: 2px;
-    width: 3.125em;
+    width: 2.325em;
     position: relative;
     display: block;
     margin: 0 auto;
@@ -52,11 +52,11 @@ header {
 }
 
 .btn__menu__icon::after {
-    top: 12px;
+    top: 7px;
 }
 
 .btn__menu__icon::before {
-    bottom: 14px;
+    bottom: 10px;
 }
 //change sandwitch  to X on click
 
@@ -82,9 +82,10 @@ header {
     width: 21em;
     display: none;
     position: fixed;
-    right: 1%;
-    margin-top: 5.625em;
+    right: 1.35em;
+    margin-top: 3.625em;
     margin-left: 2em;
+    padding: 1em;
     background: #eee;
     font-weight: bold;
     text-align: center;

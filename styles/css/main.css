@@ -10,12 +10,12 @@
 .nav__list
 */
 header {
-  height: 7.1em;
+  height: 5.1em;
   background-color: #fff; }
 
 .btn__menu {
-  width: 6.25em;
-  height: 6.25em;
+  width: 4.25em;
+  height: 4.25em;
   display: -webkit-box;
   display: -webkit-flex;
   display: -ms-flexbox;
@@ -44,7 +44,7 @@ header {
 .btn__menu__icon::before {
   content: '';
   height: 2px;
-  width: 3.125em;
+  width: 2.325em;
   position: relative;
   display: block;
   margin: 0 auto;
@@ -53,10 +53,10 @@ header {
   transition: all ease-in-out 400ms; }
 
 .btn__menu__icon::after {
-  top: 12px; }
+  top: 7px; }
 
 .btn__menu__icon::before {
-  bottom: 14px; }
+  bottom: 10px; }
 
 .btn__menu__icon--active-js {
   background: transparent; }
@@ -83,9 +83,10 @@ header {
   width: 21em;
   display: none;
   position: fixed;
-  right: 1%;
-  margin-top: 5.625em;
+  right: 1.35em;
+  margin-top: 3.625em;
   margin-left: 2em;
+  padding: 1em;
   background: #eee;
   font-weight: bold;
   text-align: center;
@@ -416,17 +417,20 @@ form__options__select
 btn--add-category
 */
 .form {
-  width: 35em;
+  width: -webkit-calc(10% + 18em);
+  width: calc(10% + 18em);
   border: none;
   background-color: #fff; }
 
 .form__title-input {
-  width: 17.5em; }
+  width: -webkit-calc(10% + 12em);
+  width: calc(10% + 12em); }
   .form__title-input:focus {
     border-color: #43346d; }
 
 .form__options {
-  width: 21.42em; }
+  width: -webkit-calc(10% + 16em);
+  width: calc(10% + 16em); }
 
 .form__options__select {
   border: 1px solid #43346d;
@@ -662,8 +666,10 @@ edit--hide
   text-align: center; }
 
 .edit__field {
-  width: 80%;
-  height: 14.28em;
+  width: -webkit-calc(63% + 2em);
+  width: calc(63% + 2em);
+  height: -webkit-calc(2vw + 10em);
+  height: calc(2vw + 10em);
   margin: 0.714em 0 0.714em 0.714em;
   color: #333;
   resize: none;
@@ -673,7 +679,8 @@ edit--hide
 
 .edit__btns {
   width: 18%;
-  height: 14.28em;
+  height: -webkit-calc(2vw + 10em);
+  height: calc(2vw + 10em);
   margin: 0.714em 0;
   float: left;
   background-color: #fff; }
@@ -708,7 +715,7 @@ footer {
   width: 100%;
   position: absolute;
   bottom: 0;
-  height: 7.14em;
+  padding: 1.5em;
   display: inline-block;
   margin-top: 3.51em;
   text-align: center;
@@ -718,7 +725,7 @@ footer {
   position: relative;
   top: 25%;
   color: #43346d;
-  font-size: 2em;
+  font-size: 2rem;
   font-weight: bold;
   text-decoration: none; }
 
@@ -735,30 +742,3 @@ footer {
 
 .md-36 {
   font-size: 36px; }
-
-@media screen and (min-width: 991px) and (max-width: 1449px) {
-  .edit__field {
-    width: 60%;
-    height: 10.71em; } }
-
-@media screen and (min-width: 1450px) and (max-width: 1635px) {
-  .edit__field {
-    width: 70%; } }
-
-@media screen and (max-width: 767px) {
-  .edit__field {
-    width: 70%; } }
-
-@media screen and (max-width: 480px) {
-  .create {
-    width: 20.14em; }
-  .create__category {
-    width: 14.4em; }
-  .create__options {
-    width: 18.42em; }
-  .edit__field {
-    width: 73%; }
-  footer {
-    height: 4.14em; }
-  .footer__link {
-    font-size: 1.3rem; } }
